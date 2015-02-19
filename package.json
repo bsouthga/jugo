@@ -1,0 +1,25 @@
+{
+  "name": "jugo",
+  "version": "0.0.1",
+  "description": "JavaScript port of OpenFuego",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bsouthga/jugo.git"
+  },
+  "keywords": [
+    "twitter",
+    "fuego",
+    "openfuego",
+    "journalism"
+  ],
+  "author": "Ben Southgate",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bsouthga/jugo/issues"
+  },
+  "homepage": "https://github.com/bsouthga/jugo"
+}
