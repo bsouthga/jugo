@@ -24,6 +24,7 @@
   "homepage": "https://github.com/bsouthga/jugo",
   "dependencies": {
     "mongodb": "^1.4.31",
+    "mongoose": "^3.8.23",
     "twitter": "^1.2.1"
   },
   "devDependencies": {
