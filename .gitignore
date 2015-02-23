@@ -1,3 +1,5 @@
 node_modules
 *.sublime*
 data/db
+lib/jugo.json
+lib/tweet.js

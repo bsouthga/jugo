@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/bsouthga/jugo",
   "dependencies": {
+    "lodash": "^3.3.0",
     "mongodb": "^1.4.31",
     "mongoose": "^3.8.23",
+    "twit": "^1.1.20",
     "twitter": "^1.2.1"
   },
   "devDependencies": {
