@@ -1,4 +1,6 @@
-# *jugo*, [fuego](https://github.com/niemanlab/openfuego) for JavaScript
+# *jugo*
+
+### [fuego](https://github.com/niemanlab/openfuego) for JavaScript
 
 # Installation
 

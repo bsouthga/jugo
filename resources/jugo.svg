@@ -1,0 +1,11 @@
+<svg width="30.55752420425415" height="26.055590629577637" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>jugo</title>
+  <rect fill="#ffffff" stroke-linejoin="null" stroke-linecap="null" x="9.54285" y="1.68572" width="6.85714" height="5.42857" rx="1" ry="1" id="svg_26" stroke="#000000"/>
+  <rect fill="#ffffff" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="17.84797" y="3.43183" width="6.85714" height="5.42857" rx="1" ry="1" id="svg_21" stroke="#000000"/>
+  <path fill="#7f00ff" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" d="m2.84798,5.14612l3.27665,18l18.31065,0l2.69841,-18l-24.28571,0z" stroke-opacity="0" opacity="0.85" id="svg_22" stroke="#000000"/>
+  <line fill="none" stroke-dasharray="null" stroke-linejoin="bevel" stroke-linecap="round" x1="24.70504" y1="23.43184" x2="6.56227" y2="23.43182" id="svg_23" stroke="#000000" stroke-width="2"/>
+  <line fill="none" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="round" x1="26.33479" y1="3.01567" x2="26.33479" y2="23.08725" transform="rotate(9.30527114868164 26.33479499816894,13.051462173461934) " id="svg_24" stroke-width="2" stroke="#000000"/>
+  <line fill="none" stroke-dasharray="null" stroke-linejoin="bevel" stroke-linecap="round" x1="4.15329" y1="3.19823" x2="4.15329" y2="23.64898" transform="rotate(-11.160926818847656 4.153289794921897,13.423604011535648) " id="svg_25" stroke-width="2" stroke="#000000"/>
+ </g>
+</svg>
