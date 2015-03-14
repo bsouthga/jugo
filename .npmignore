@@ -1,0 +1,7 @@
+jugo.json
+*.sublime*
+.gitignore
+spec.md
+node_modules/*
+test/*
+data/*

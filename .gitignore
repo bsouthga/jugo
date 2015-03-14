@@ -1,6 +1,4 @@
-node_modules
+node_modules/*
 *.sublime*
-data/db
+data/*
 jugo.json
-lib/tweet.js
-openfuego/*
