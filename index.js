@@ -1,9 +1,22 @@
+/*
+  jugo object
+*/
 
 var database = require('./lib/database.js'),
     monitor = require('./lib/monitor.js'),
     universe = require('./lib/universe.js');
 
 
+/*
+  jugo object init
+
+  @param config::object <- jugo config object
+
+  returns object {
+    collect:: function() <- start collector daemon
+    get:: function(query, callback) <- get tweet aggregates
+  }
+*/
 function jugo(config) {
 
   var db = database(config);
