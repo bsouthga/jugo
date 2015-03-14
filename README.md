@@ -1,4 +1,4 @@
-# *jugo*
+# *jugo* ![jugo](/resources/jugo.png)
 
 ### [fuego](https://github.com/niemanlab/openfuego) for JavaScript
 
