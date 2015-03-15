@@ -18,6 +18,7 @@ npm install jugo
 ## Usage
 
 ```javascript
+
 var jugo = require('jugo');
 
 var J = jugo({
@@ -32,5 +33,8 @@ var J = jugo({
   ],
   "database" : "mongodb://localhost/test" // database location
 })
+
+// start collecting
+J.collect();
 
 ```

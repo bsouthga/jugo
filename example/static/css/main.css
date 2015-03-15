@@ -1,0 +1,11 @@
+
+h1 {
+  font-weight: normal;
+  font-size: 36pt;
+}
+
+.bar {
+  background-color: steelblue;
+  height: 100%;
+  display: block;
+}

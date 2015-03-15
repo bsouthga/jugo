@@ -13,12 +13,18 @@ var express = require('express'),
     // jugo config
     jugo_config = require('./jugo.json');
 
+
+var resultsTemplate = handlebars.compile(
+    fs.readFileSync('./templates/index.html', "utf8")
+  )
+
+
 // express app + jugo objects
 var app = express(),
     J = jugo(jugo_config);
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  res.send(resultsTemplate({}))
 })
 
 // database query api
@@ -41,27 +47,24 @@ app.get('/get/:query', function(req, res) {
     }
   }
 
-  J.get({max_date : max, min_date : min}, function(results) {
-    var vals = _.chain(results)
-        .sortBy('mentions')
-        .takeRight(20)
-        .map(function(r) {
-          return {
-            "url" : r._id,
-            "count" : r.mentions
-          };
-        })
-        .reverse()
-        .value();
-
-    res.send(vals);
-  });
+  J.get(
+    {
+      max_date : max,
+      min_date : min,
+      num : 20
+    },
+    function(results) {
+      res.send(results);
+    }
+  );
 })
 
 app.get('/404', function(req, res) {
   res.status(404);
   res.send('<html><body>404</body></html>')
 })
+
+app.use('/static', express.static(__dirname + '/static'));
 
 app.use(function(req, res, next) {
   res.redirect('/404');

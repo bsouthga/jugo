@@ -42,7 +42,10 @@ function jugo(config) {
   function get(query, callback) {
     query = query || {};
     db.open(function() {
-      db.get(query, callback)
+      db.get(query, function(results) {
+        callback(results);
+        db.close();
+      })
     })
   }
 
