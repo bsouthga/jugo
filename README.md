@@ -2,7 +2,7 @@
 
 ### [fuego](https://github.com/niemanlab/openfuego) for JavaScript
 
-# Installation
+## Installation
 
 To run jugo, the following must be installed
 
@@ -15,3 +15,22 @@ Once both are installed, run the following to install jugo locally
 npm install jugo
 ```
 
+## Usage
+
+```javascript
+var jugo = require('jugo');
+
+var J = jugo({
+  "twitter" : {
+    "consumer_key": "<INSERT KEY>",
+    "consumer_secret": "<INSERT KEY>",
+    "access_token": "<INSERT KEY>",
+    "access_token_secret": "<INSERT KEY>"
+  },
+  "accounts" : [
+    ... // list of accounts you want to track
+  ],
+  "database" : "mongodb://localhost/test" // database location
+})
+
+```
