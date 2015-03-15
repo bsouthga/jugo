@@ -1,4 +1,4 @@
 node_modules/*
 *.sublime*
 data/*
-jugo.json
+example/jugo.json

@@ -25,9 +25,9 @@ function jugo(config) {
     // open database connection...
     db.open(function() {
       // get authorities and their followers...
-      universe.populate(config.accounts, function(auth_data) {
+      universe(config).populate(function(auth_data) {
         // stream tweets from authorities and followers...
-        monitor(auth_data).tweet(function(tweet){
+        monitor(config, auth_data).tweet(function(tweet){
           // each time there is a tweet, log and collect
           console.log('@'+tweet.user.screen_name + ':::' + tweet.text);
           // add tweet to database
@@ -53,13 +53,4 @@ function jugo(config) {
 
 }
 
-
-var jugo_config = require('./jugo.json');
-
-var J = jugo(jugo_config);
-
-J.get({ max_date : new Date() }, function(results) {
-    console.log(results)
-  });
-
-//module.exports = jugo;
+module.exports = jugo;

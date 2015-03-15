@@ -23,13 +23,17 @@
   },
   "homepage": "https://github.com/bsouthga/jugo",
   "dependencies": {
+    "cheerio": "^0.18.0",
     "lodash": "^3.3.0",
     "mongodb": "^1.4.31",
     "mongoose": "^3.8.23",
     "queue-async": "^1.0.7",
+    "request": "^2.53.0",
     "twit": "^1.1.20"
   },
   "devDependencies": {
+    "express": "^4.12.2",
+    "handlebars": "^3.0.0",
     "mocha": "^2.1.0"
   }
 }
