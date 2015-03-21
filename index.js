@@ -17,43 +17,53 @@ var database = require('./lib/database.js'),
     get:: function(query, callback) <- get tweet aggregates
   }
 */
+
 function jugo(config) {
 
   var db = database(config);
 
+  var currently_open = false;
+
+  var self = {
+    collect : collect,
+    open : open,
+    get : get
+  };
+
+  function open(callback) {
+    currently_open = true;
+    db.open(callback)
+    return this;
+  }
+
   function collect() {
-    // open database connection...
-    db.open(function() {
+    this.open(function() {
       // get authorities and their followers...
       universe(config).populate(function(auth_data) {
         // stream tweets from authorities and followers...
         monitor(config, auth_data).tweet(function(tweet){
-          // each time there is a tweet, log and collect
-          console.log('@'+tweet.user.screen_name + ':::' + tweet.text);
           // add tweet to database
           db.add(tweet);
         })
         // begin collecting
         .init();
       });
-    });
+    })
+    return this;
   }
 
   function get(query, callback) {
+    if (!currently_open) throw "database not initialized";
     query = query || {};
-    db.open(function() {
-      db.get(query, function(results) {
-        callback(results);
-        db.close();
-      })
+    db.get(query, function(results) {
+      callback(results);
     })
+    return this;
   }
 
-  return {
-    collect : collect,
-    get : get
-  }
+  return self;
 
 }
+
 
 module.exports = jugo;

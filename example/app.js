@@ -23,6 +23,10 @@ var resultsTemplate = handlebars.compile(
 var app = express(),
     J = jugo(jugo_config);
 
+J.open(function() {
+  console.log('database open!')
+});
+
 app.get('/', function (req, res) {
   res.send(resultsTemplate({}))
 })
