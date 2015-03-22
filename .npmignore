@@ -5,4 +5,4 @@ spec.md
 node_modules/*
 test/*
 data/*
-example/jugo.json
+example/*

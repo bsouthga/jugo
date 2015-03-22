@@ -13,7 +13,8 @@ describe('scrape.getMeta', function() {
     '</html>'
   )
   var error = null;
-  var response = {statusCode : 200};
+  var response = {statusCode : 200, headers : {}};
+  response.headers['content-type'] = 'text/html';
 
   it('should grab meta properties of arbitrary depth', function(done) {
 
@@ -24,7 +25,32 @@ describe('scrape.getMeta', function() {
       done();
     }
 
-    scrape.getMeta(callback, error, response, test_meta)
+    scrape.getMeta(callback, null, response, test_meta)
+  })
+
+
+  it('should not process non-html responses', function(done) {
+
+    var badresponse = {
+      statusCode : 200,
+      headers : { "content-type" : "application/pdf" }
+    }
+
+    var callback = function(meta) {
+
+      var keys = Object.keys(meta);
+
+      if (!(keys.length === 1 &&
+            keys[0] === "other" &&
+            Object.keys(meta.other).length === 0)) {
+        throw "collected meta content from content-type=application/pdf";
+      }
+
+      done();
+    }
+
+    scrape.getMeta(callback, null, badresponse, test_meta)
+
   })
 
 })

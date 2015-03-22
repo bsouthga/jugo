@@ -1,6 +1,6 @@
 {
   "name": "jugo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JavaScript port of OpenFuego",
   "main": "index.js",
   "scripts": {
@@ -31,8 +31,6 @@
     "twit": "^1.1.20"
   },
   "devDependencies": {
-    "express": "^4.12.2",
-    "handlebars": "^3.0.0",
     "mocha": "^2.1.0"
   }
 }
