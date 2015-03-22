@@ -1,6 +1,24 @@
 
 
-var jugo_config = require('../example/jugo.json');
+var jugo_config = {
+  "twitter" : {
+    "consumer_key": "...",
+    "consumer_secret": "...",
+    "access_token": "...",
+    "access_token_secret": "..."
+  },
+  "accounts" : [
+    "dkthomp",
+    "robpaulmeyer",
+    "alexismadrigal",
+    "grahamdavida",
+    "beccarosen",
+    "crampell"
+  ],
+  "database" : "..."
+};
+
+
 var universe = require('../lib/universe.js')(jugo_config);
 
 
