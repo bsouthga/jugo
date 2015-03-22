@@ -37,10 +37,12 @@ function jugo(config) {
   }
 
   function collect() {
+    console.log("opening twitter stream...")
     this.open(function() {
       // get authorities and their followers...
       universe(config).populate(function(auth_data) {
         // stream tweets from authorities and followers...
+        console.log('collecting...')
         monitor(config, auth_data).tweet(function(tweet){
           // add tweet to database
           db.add(tweet);
