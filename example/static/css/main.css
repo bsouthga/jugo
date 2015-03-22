@@ -1,11 +1,145 @@
 
-h1 {
-  font-weight: normal;
-  font-size: 36pt;
+html, body, a {
+  color: #000;
 }
 
-.bar {
-  background-color: steelblue;
-  height: 100%;
-  display: block;
+div, span, p {
+  text-overflow: ellipsis;
 }
+
+span.card-title {
+  white-space: nowrap;
+}
+
+a {
+  color: #b19cd9;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 45pt;
+}
+
+span.tweet-count {
+  z-index: 20;
+  border-radius: 3px;
+  position: absolute;
+  padding: 2px 5px;
+  top: 10px;
+  right: 10px;
+  font-size: 11pt;
+}
+
+#top {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 20px;
+}
+
+.footer-div {
+  width: 100%;
+  text-align: center;
+  font-size: 12pt;
+  border-top: 2px solid #eee;
+  margin-top: 40px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.jugo {
+  color: #b19cd9;
+}
+
+.btn {
+  background-color: #b19cd9;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #b19cd9;
+}
+
+a.btn:hover {
+  text-decoration: none;
+}
+
+a.btn.active {
+  text-decoration: underline;
+}
+
+.card-title a {
+  color: #b19cd9;
+}
+
+
+img {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.no-results {
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  font-size: 20pt;
+}
+
+
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner div {
+  background-color: #b19cd9;
+  height: 100%;
+  width: 8px;
+  margin-left: 2px;
+  display: inline-block;
+
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+

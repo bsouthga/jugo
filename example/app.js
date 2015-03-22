@@ -14,9 +14,13 @@ var express = require('express'),
     jugo_config = require('./jugo.json');
 
 
-var resultsTemplate = handlebars.compile(
+var indexTemplate = handlebars.compile(
     fs.readFileSync('./templates/index.html', "utf8")
-  )
+  );
+
+var aboutTemplate = handlebars.compile(
+    fs.readFileSync('./templates/about.html', "utf8")
+  );
 
 
 // express app + jugo objects
@@ -27,8 +31,14 @@ J.open(function() {
   console.log('database open!')
 });
 
+
+app.get('/about', function(req, res) {
+  res.send(aboutTemplate({}))
+});
+
+
 app.get('/', function (req, res) {
-  res.send(resultsTemplate({}))
+  res.send(indexTemplate({}))
 })
 
 // database query api
@@ -55,7 +65,7 @@ app.get('/get/:query', function(req, res) {
     {
       max_date : max,
       min_date : min,
-      num : 20
+      num : 40
     },
     function(results) {
       res.send(results);
