@@ -2,6 +2,8 @@
 
 ### [fuego](https://github.com/niemanlab/openfuego) for JavaScript
 
+view an [example app using jugo](http://apps.bsouth.ga)
+
 ## Installation
 
 To run jugo, the following must be installed
