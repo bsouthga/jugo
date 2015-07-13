@@ -2,3 +2,4 @@ node_modules/*
 *.sublime*
 data/*
 example/*
+jugo.json
